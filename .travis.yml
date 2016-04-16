@@ -4,7 +4,7 @@ jdk:
   - openjdk7
   - oraclejdk8
 
-before_deploy: ./war-deploy-script.sh
+before_deploy: chmod +x war-deploy-script.sh && ./war-deploy-script.sh
 
 deploy:
   provider: openshift
