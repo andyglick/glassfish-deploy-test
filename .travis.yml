@@ -1,0 +1,17 @@
+language: java
+
+jdk:
+  - openjdk7
+  - oraclejdk8
+
+before_deploy: ./war-deploy-script.sh
+
+deploy:
+  provider: openshift
+  user: danielgacituav@gmail.com
+  password:
+    secure: SVp+KQo8vZrDJ2ValkNCHrHvL9Ej87+Po2wVeLBk8JvJnDCNqNmL1qtjBRV2QbfMS9KIfVEx52JNS3qac5PpH1sIPRYanVcV4zftMNsrDZn/QslA2JTsbd37QNNnyXeqMZG0JureruYr3wj2VRZV4YUbBP/oNzArSpLRMxuF6manMA8umy3+VA1ugcMOXjQV6ymYlpdd8+ls9QkZcWT/WUGfrLOzpZTOXenrka5eHJ5uzJVysuZViLPE2xebBLVVyYwXi1aQNmAUJ/SO/3tQHm5F3soPC7dYSc9q7RwOoivKxRVwCLbLtvJ+XynlHQTY3uPP365wL42pngGCdzmfLkiwUJqT4PPHGU/CAL+fX7E6l0KDGZXtXhlzlv4JbeuiGivXYuQnHsUQ88IoC1/4P3IwEgGMv1xFA4vumjC9IDtncvbsnd84Vad1ZmXfNja/ulFq9x9+mLUa1462Q8MUG/kjn2cWaVQrFymtToBkCnf8ejfNNgR+6YPFAwPGNvnO/Dv7jeCADiJfv+b6uyppbPl2xHB1SbDjZr+8+onH2YOJAcR6mfSAYmc/QK7IaeortQQ2y/Sfbyruw+SbwGTfsuyvenI9gaexbf+y5pt2FokAhlc9TC2uAvT38oxdp5JVH3SdDNy/OgEr1cS97cKmbOpK96yae9bR7Vucblao/WU=
+  app: glassfishdeploy
+  domain: dgacitua
+  on:
+    jdk: openjdk7
