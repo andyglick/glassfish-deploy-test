@@ -13,7 +13,7 @@ mv build/libs/*.war diy/glassfish4/glassfish/domains/domain1/autodeploy/
 
 echo 'Batch loading SQL files to MySQL'
 cd sql/
-ls -1 *.sql | awk '{ print "source",$0 }' | mysql --batch --host=$OPENSHIFT_MYSQL_DB_HOST --port=$OPENSHIFT_MYSQL_DB_PORT --user=$OPENSHIFT_MYSQL_DB_USERNAME --password=$OPENSHIFT_MYSQL_DB_PASSWORD
+ls -1 *.sql | awk '{ print "source",$0 }' | mysql --batch
 
 echo 'Terminating build script'
 cd $OPENSHIFT_REPO_DIR
